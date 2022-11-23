@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	unsigned int c = 0, c1, cp = 0;
+	int val;
 	char *str;
 
 	va_start(args, format);
@@ -22,8 +23,17 @@ int _printf(const char *format, ...)
 			switch (format[c])
 			{
 				case 'c':
+				val = va_arg(args, int);
+				if (val >= 0 && val <= 127)
+				{
 				_putchar(va_arg(args, int));
 				cp++;
+				}
+				else
+				{
+				_putchar(-1);
+				cp++;
+				}
 				break;
 
 				case 's':
