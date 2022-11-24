@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print_double- prints a double
+ * print_float- prints a float
  * @f:the number
  */
 
-void print_double(double f)
+void print_float(double f)
 {
 	int dec = 1000000;
 	int i = (int)f;

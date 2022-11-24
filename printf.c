@@ -5,7 +5,7 @@
 /**
  * _printf - prints input to std output
  * @format: string with text to be written to stdout
- * Return: 0 - sucees
+ * Return: 0 - success
  */
 
 int _printf(const char *format, ...)
