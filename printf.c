@@ -54,7 +54,7 @@ int _printf(const char *format, ...)
 				break;
 
 				case 'd':
-				print_double(va_arg(args, double));
+				print_float(va_arg(args, double));
 				break;
 			}
 		}
