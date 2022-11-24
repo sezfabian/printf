@@ -5,18 +5,18 @@
  *
  */
 
-int print_int(int n)
+void print_double(double n)
 {
-	int cp = 0;
-	if (n < 0)
+
+int x;
+if (n < 0)
 	{
 		_putchar('-');
-		cp++;
 		n = -n;
 	}
 	if (n / 10 != 0)
-		cp = cp + print_int(n / 10);
-	_putchar((n % 10) + '0');
-	cp++;
-	return (cp);
+		print_double(n / 10);
+	x = (int)n;
+	_putchar((x % 10) + '0');
 }
+

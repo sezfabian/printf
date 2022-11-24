@@ -50,11 +50,11 @@ int _printf(const char *format, ...)
 				break;
 
 				case 'i':
-				print_int(va_arg(args, int));
+				cp = cp + print_int(va_arg(args, int));
 				break;
 
 				case 'd':
-				print_float(va_arg(args, double));
+				cp = cp + print_int(va_arg(args, int));
 				break;
 			}
 		}
