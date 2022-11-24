@@ -50,6 +50,7 @@ int _printf(const char *format, ...)
 
 				case 'd':
 				print_double(va_arg(args, double));
+				break;
 
 				case '\0':
 				return (-1);
