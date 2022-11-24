@@ -44,6 +44,12 @@ int _printf(const char *format, ...)
 				cp++;
 				break;
 
+				case '\n':
+				_putchar('%');
+				_putchar('\n');
+				cp = cp + 2;
+				break;
+
 				case 'i':
 				print_int(va_arg(args, int));
 				break;
