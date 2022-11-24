@@ -13,6 +13,9 @@ int _printf(const char *format, ...)
 	unsigned int c = 0, c1, cp = 0;
 	char *str;
 
+	if (format == NULL)
+		return (-1);
+
 	va_start(args, format);
 	while (format[c] != '\0')
 	{
