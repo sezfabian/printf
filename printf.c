@@ -33,11 +33,15 @@ int _printf(const char *format, ...)
 				for (c1 = 0; str[c1] != '\0'; c1++)
 				{
 					_putchar(str[c1]);
-					cp++;
 				}
 				}
 				else
 					cp = cp + _printf("(null)");
+				break;
+
+				case '%':
+				_putchar('%');
+				cp++;
 				break;
 
 				case 'i':
@@ -46,6 +50,26 @@ int _printf(const char *format, ...)
 
 				case 'd':
 				print_double(va_arg(args, double));
+
+				case '\0':
+				return (-1);
+
+				case ' ':
+				while (format[c] == ' ')
+				{
+				c++;
+				}
+				if (format[c] == '\0')
+					return (-1);
+				else
+				{
+					_putchar('%');
+					_putchar(' ');
+					_putchar(format[c]);
+					cp = cp + 3;
+				}
+				break;
+
 			}
 		}
 		else
@@ -58,3 +82,4 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (cp);
 }
+
