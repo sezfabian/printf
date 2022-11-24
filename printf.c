@@ -33,6 +33,7 @@ int _printf(const char *format, ...)
 				for (c1 = 0; str[c1] != '\0'; c1++)
 				{
 					_putchar(str[c1]);
+					cp++;
 				}
 				}
 				else
@@ -44,12 +45,6 @@ int _printf(const char *format, ...)
 				cp++;
 				break;
 
-				case '\n':
-				_putchar('%');
-				_putchar('\n');
-				cp = cp + 2;
-				break;
-
 				case 'i':
 				print_int(va_arg(args, int));
 				break;
@@ -57,26 +52,6 @@ int _printf(const char *format, ...)
 				case 'd':
 				print_double(va_arg(args, double));
 				break;
-
-				case '\0':
-				return (-1);
-
-				case ' ':
-				while (format[c] == ' ')
-				{
-				c++;
-				}
-				if (format[c] == '\0')
-					return (-1);
-				else
-				{
-					_putchar('%');
-					_putchar(' ');
-					_putchar(format[c]);
-					cp = cp + 3;
-				}
-				break;
-
 			}
 		}
 		else
