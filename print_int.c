@@ -2,12 +2,13 @@
 /**
  * print_int- prints integer
  * @n: integer to print
- *
+ * Return: cp count of printed chars
  */
 
 int print_int(int n)
 {
 	int cp = 0;
+
 	if (n < 0)
 	{
 		_putchar('-');
