@@ -49,11 +49,7 @@ int _printf(const char *format, ...)
 				cp++;
 				break;
 
-				case 'i':
-				cp = cp + print_int(va_arg(args, int));
-				break;
-
-				case 'd':
+				case 'i': case 'd':
 				cp = cp + print_int(va_arg(args, int));
 				break;
 			}
