@@ -56,9 +56,9 @@ int _printf(const char *format, ...)
 				case '\0':
 					return (-1);
 
-				case '\n':
+				default:
 				_putchar('%');
-				_putchar('\n');
+				_putchar(format[c]);
 				cp = cp + 2;
 				break;
 				}
