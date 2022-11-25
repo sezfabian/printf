@@ -52,7 +52,11 @@ int _printf(const char *format, ...)
 				case 'i': case 'd':
 				cp = cp + print_int(va_arg(args, int));
 				break;
-			}
+
+				case '\0':
+					return (-1);
+
+				}
 		}
 		else
 		{
