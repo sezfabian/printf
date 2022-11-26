@@ -50,7 +50,7 @@ int _printf(const char *format, ...)
 				break;
 
 				case 'i': case 'd':
-				cp = cp + print_int(va_arg(args, double));
+				cp = cp + print_int(va_arg(args, int));
 				break;
 
 				case '\0':
