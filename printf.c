@@ -53,6 +53,10 @@ int _printf(const char *format, ...)
 				cp = cp + print_int(va_arg(args, int));
 				break;
 
+				case 'b':
+				cp = cp + print_bin(va_arg(args, unsigned int));
+				break;
+
 				case '\0':
 					return (-1);
 
