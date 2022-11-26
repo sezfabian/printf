@@ -3,7 +3,7 @@
 
 
 int _putchar(char c);
-int  print_int(int n);
+int  print_int(double n);
 void print_float(double f);
 int _printf(const char *format, ...);
 
