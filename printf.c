@@ -53,8 +53,25 @@ int _printf(const char *format, ...)
 				cp = cp + print_int(va_arg(args, int));
 				break;
 
+				case 'u':
+				cp = cp + print_unsignedint(va_arg(args, unsigned int));
+				break;
+
 				case 'b':
 				cp = cp + print_bin(va_arg(args, unsigned int));
+				break;
+
+
+				case 'o':
+				cp = cp + print_octal(va_arg(args, unsigned int));
+				break;
+
+				case 'X':
+				cp = cp + print_hex(va_arg(args, unsigned int), 1);
+				break;
+
+				case 'x':
+				cp = cp + print_hex(va_arg(args, unsigned int), 0);
 				break;
 
 				case '\0':

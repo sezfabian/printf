@@ -22,3 +22,21 @@ int print_int(double n)
 	cp++;
 	return (cp);
 }
+
+/**
+ * print_unsignedint- prints unsigned integer
+ * @n: integer to print
+ * Return: cp count of printed chars
+ */
+
+int print_unsignedint(unsigned int n)
+{
+	int cp = 0;
+
+	if (n / 10 != 0)
+	cp = cp + print_int(n / 10);
+
+	_putchar((n % 10) + '0');
+	cp++;
+	return (cp);
+}
