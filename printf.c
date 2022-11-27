@@ -74,6 +74,14 @@ int _printf(const char *format, ...)
 				cp = cp + print_hex(va_arg(args, unsigned int), 0);
 				break;
 
+				case 'R':
+				cp = cp + print_rot13(va_arg(args, char*));
+				break;
+
+				case 'r':
+				cp = cp + print_rev(va_arg(args, char*));
+				break;
+
 				case '\0':
 					return (-1);
 
